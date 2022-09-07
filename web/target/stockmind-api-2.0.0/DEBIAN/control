@@ -1,0 +1,11 @@
+Source: stockmind-api
+Package: stockmind-api
+Version: 2.0.0
+Section: java
+Priority: optional
+Architecture: all
+Installed-Size: 83465
+Depends: oracle-java8-installer
+Maintainer: Víctor Villena <victor.villena@clluc.com>
+Description: An API that allows people to send personal assets
+ An API that allows people to send personal assets

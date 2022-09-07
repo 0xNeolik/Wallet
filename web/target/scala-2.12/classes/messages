@@ -1,0 +1,52 @@
+error.email = Valid email required
+error.required = This field is required
+invalid.credentials = Invalid credentials!
+access.denied = Access denied!
+could.not.authenticate = Could not authenticate with social provider! Please try again!
+
+home.title = Believe - Home
+sign.up.title = Believe - Sign Up
+sign.in.title = Believe - Sign In
+
+toggle.navigation = Toggle navigation
+welcome.signed.in = Welcome, you are now signed in!
+
+sign.up.account = Sign up for a new account
+sign.in.credentials = Sign in with your credentials
+
+error = Error!
+info = Info!
+success = Success!
+home = Home
+first.name = First name
+last.name = Last name
+full.name = Full name
+reset = Reset
+sign.up = Sign up
+sign.in = Sign in
+sign.out = Sign out
+login.with.twitter = Use your Twitter account to sign in:
+
+twitter = Twitter
+
+send.to = Send to:
+send.token = Token to send:
+send.amount = Amount to send:
+send.submit = Send coins
+send.success.sent = Tokens sent successfully
+send.success.pending = The tokens will be sent to the receiver once she logs in
+send.error = There has been an error
+
+token.mytokens = My tokens
+token.offers = Open token offers
+token.buy = Buy tokens
+token.send = Send tokens
+token.asset = Asset
+token.amount = Amount
+
+transaction.transactions = Transactions
+transaction.type = Type
+transaction.account = Account
+transaction.token = Token
+transaction.amount = Amount
+transaction.date = Date

@@ -1,0 +1,9 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/albertogomeztoribio/git/stockmind/web/conf/logback.xml,/Users/albertogomeztoribio/git/stockmind/web/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/albertogomeztoribio/git/stockmind/web/conf/messages,/Users/albertogomeztoribio/git/stockmind/web/target/scala-2.12/classes/messages)[0m
+[0m[[0mdebug[0m] [0m	(/Users/albertogomeztoribio/git/stockmind/web/conf/silhouette.conf,/Users/albertogomeztoribio/git/stockmind/web/target/scala-2.12/classes/silhouette.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/albertogomeztoribio/git/stockmind/web/conf/keystore.p12,/Users/albertogomeztoribio/git/stockmind/web/target/scala-2.12/classes/keystore.p12)[0m
+[0m[[0mdebug[0m] [0m	(/Users/albertogomeztoribio/git/stockmind/web/conf/application.prod.conf,/Users/albertogomeztoribio/git/stockmind/web/target/scala-2.12/classes/application.prod.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/albertogomeztoribio/git/stockmind/web/conf/application.conf,/Users/albertogomeztoribio/git/stockmind/web/target/scala-2.12/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/albertogomeztoribio/git/stockmind/web/conf/stockmind_KeyStore.jks,/Users/albertogomeztoribio/git/stockmind/web/target/scala-2.12/classes/stockmind_KeyStore.jks)[0m
+[0m[[0mdebug[0m] [0m	(/Users/albertogomeztoribio/git/stockmind/web/conf/routes,/Users/albertogomeztoribio/git/stockmind/web/target/scala-2.12/classes/routes)[0m

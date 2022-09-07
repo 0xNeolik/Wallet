@@ -1,0 +1,1 @@
+name := "twitter-secondary-adapter"

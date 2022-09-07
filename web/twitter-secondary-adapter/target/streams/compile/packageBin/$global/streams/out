@@ -1,0 +1,17 @@
+[0m[[0minfo[0m] [0mPackaging /Users/albertogomeztoribio/git/stockmind/web/twitter-secondary-adapter/target/scala-2.12/twitter-secondary-adapter_2.12-2.0.0.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/twitter-secondary-adapter/target/scala-2.12/classes/com/clluc/stockmind/adapter[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/twitter/TwitterAdapter$.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/twitter-secondary-adapter/target/scala-2.12/classes/com/clluc/stockmind/adapter/twitter/TwitterAdapter$.class[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/twitter/TwitterAdapter.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/twitter-secondary-adapter/target/scala-2.12/classes/com/clluc/stockmind/adapter/twitter/TwitterAdapter.class[0m
+[0m[[0mdebug[0m] [0m	com/clluc[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/twitter-secondary-adapter/target/scala-2.12/classes/com/clluc[0m
+[0m[[0mdebug[0m] [0m	com[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/twitter-secondary-adapter/target/scala-2.12/classes/com[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/twitter[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/twitter-secondary-adapter/target/scala-2.12/classes/com/clluc/stockmind/adapter/twitter[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/twitter-secondary-adapter/target/scala-2.12/classes/com/clluc/stockmind[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

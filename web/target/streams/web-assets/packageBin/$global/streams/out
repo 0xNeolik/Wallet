@@ -1,0 +1,31 @@
+[0m[[0minfo[0m] [0mPackaging /Users/albertogomeztoribio/git/stockmind/web/target/scala-2.12/stockmind-api_2.12-2.0.0-web-assets.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	public/images/silhouette.png[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/images/silhouette.png[0m
+[0m[[0mdebug[0m] [0m	public/images/providers/xing.png[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/images/providers/xing.png[0m
+[0m[[0mdebug[0m] [0m	public/styles/theme.css[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/styles/theme.css[0m
+[0m[[0mdebug[0m] [0m	public/images/providers/twitter.png[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/images/providers/twitter.png[0m
+[0m[[0mdebug[0m] [0m	public/hello.html[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/hello.html[0m
+[0m[[0mdebug[0m] [0m	public/images/providers/vk.png[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/images/providers/vk.png[0m
+[0m[[0mdebug[0m] [0m	public/images/providers/yahoo.png[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/images/providers/yahoo.png[0m
+[0m[[0mdebug[0m] [0m	public/images/favicon.png[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/images/favicon.png[0m
+[0m[[0mdebug[0m] [0m	public/images/providers[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/images/providers[0m
+[0m[[0mdebug[0m] [0m	public/images[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/images[0m
+[0m[[0mdebug[0m] [0m	public/styles/main.css[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/styles/main.css[0m
+[0m[[0mdebug[0m] [0m	public/images/providers/facebook.png[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/images/providers/facebook.png[0m
+[0m[[0mdebug[0m] [0m	public/images/providers/google.png[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/images/providers/google.png[0m
+[0m[[0mdebug[0m] [0m	public/styles[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/public/styles[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

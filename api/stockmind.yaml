@@ -1,0 +1,885 @@
+swagger: '2.0'
+info:
+  title: Stockmind API
+  description: Public API for the Stockmind Tokenization Platform
+  version: "1.3"
+# the domain of the service
+host: api.stockmind.com
+# array of all schemes that your API supports
+schemes:
+- https
+# will be prefixed to all paths
+basePath: /v1
+produces:
+- application/json
+paths:
+  /tokens:
+    get:
+      summary: All Tokens
+      description: |
+        Obtain a list of all available tokens on the platform.
+      tags:
+      - Tokens
+      responses:
+        200:
+          description: An array of tokens
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Tokens'
+  /erc20-tokens:
+    post:
+      summary: Create a new ERC-20 token
+      description: |
+        Create a new token with the requested attributes. Once the token
+        contract is deployed all tokens will be immediately transferred to the
+        user calling this endpoint.
+      tags:
+      - Tokens
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/TokenPost'
+      responses:
+        200:
+          description: Transaction hash of the transaction that will create the token. Note that this means the token is not created immediately. The transaction is queued on the common network transaction pool, so it can be mined eventually.
+          schema:
+            type: object
+            properties:
+              txHash:
+                type: string
+            example:
+              txHash: "0xe0d9e5932973a2df7e137144cacdcb7c66c2d480361fd3cdebc24efe625229f0"
+  /erc721-tokens:
+    post:
+      summary: Create a new ERC-721 token
+      description: |
+        Create a new ERC-721 token with the requested attributes. Once the token
+        contract is deployed it's posible to create unique units.
+      tags:
+      - Tokens
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/TokenPost721'
+      responses:
+        200:
+          description: Transaction hash of the transaction that will create the token. Note that this means the token is not created immediately. The transaction is queued on the common network transaction pool, so it can be mined eventually.
+          schema:
+            type: object
+            properties:
+              txHash:
+                type: string
+            example:
+              txHash: "0xe0d9e5932973a2df7e137144cacdcb7c66c2d480361fd3cdebc24efe625229f0"
+  /tokens/{tokenSymbol}:
+    get:
+      summary: Token information
+      description: |
+        Information about one specific token.
+      parameters:
+      - name: tokenSymbol
+        in: path
+        description: Symbol of the token
+        required: true
+        type: string
+      tags:
+      - Tokens
+      responses:
+        200:
+          description: Information about the specific token
+  /erc20-tokens/mint:
+    post:
+      summary: Mint ERC-20 Token
+      description: |
+        Issue more units of an existing token.
+      tags:
+      - Tokens
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/TokenMint'
+      responses:
+        200:
+          description: Transaction hash of the transaction that will mint the token. Note that this means the token is not mint immediately. The transaction is queued on the common network transaction pool, so it can be mined eventually.
+          schema:
+            type: object
+            properties:
+              txHash:
+                type: string
+            example:
+              txHash: "0xe0d9e5932973a2df7e137144cacdcb7c66c2d4803613dfgtebc24efe625229f0"
+  /erc721-tokens/mint:
+    post:
+      summary: Mint ERC-721 Token
+      description: |
+        Issue unique unit of an existing token.
+      tags:
+      - Tokens
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/TokenMint721'
+      responses:
+        200:
+          description: Transaction hash of the transaction that will mint the token. Note that this means the token is not mint immediately. The transaction is queued on the common network transaction pool, so it can be mined eventually.
+          schema:
+            type: object
+            properties:
+              txHash:
+                type: string
+            example:
+              txHash: "0xe0d9e5932973a2df7e137144cacdcb7c66c2d4803613dfgtebc24efe625229f0"
+  /erc20-tokens/burn:
+    post:
+      summary: Burn Token
+      description: |
+        Remove units of an existing token.
+      tags:
+      - Tokens
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/TokenBurn'
+      responses:
+        200:
+          description: Transaction hash of the transaction that will burn the token. Note that this means the token is not burn immediately. The transaction is queued on the common network transaction pool, so it can be mined eventually.
+          schema:
+            type: object
+            properties:
+              txHash:
+                type: string
+            example:
+              txHash: "0xe0d9e5932973a2df7e137144cacdcb7c66c2d480361fd3cdebc24efe62512f42"
+  /erc721-tokens/burn:
+    post:
+      summary: Burn Token
+      description: |
+        Remove unique unit of an existing ERC-721 token.
+      tags:
+      - Tokens
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/TokenBurn721'
+      responses:
+        200:
+          description: Transaction hash of the transaction that will burn the token. Note that this means the token is not burn immediately. The transaction is queued on the common network transaction pool, so it can be mined eventually.
+          schema:
+            type: object
+            properties:
+              txHash:
+                type: string
+            example:
+              txHash: "0xe0d9e5932973a2df7e137144cacdcb7c66c2d480361fd3cdebc24efe62512f42"
+  /api_key:
+    get:
+      summary: Generate Api Key
+      description: |
+        Obtain an api key to access Stockmind resources.
+      tags:
+      - Api keys
+      responses:
+        200:
+          description: A new api key
+          schema:
+            $ref: '#/definitions/ApiKey'
+  /api_key/{api_key_to_remove}:
+    delete:
+      summary: Delete Api Key
+      description: |
+        Remove an api key.
+      tags:
+      - Api keys
+      parameters:
+      - name: api_key
+        in: path
+        description: An api key
+        required: true
+        type: string
+        format: UUID
+      responses:
+        200:
+          description: A deleted api key
+          schema:
+            $ref: '#/definitions/ApiKey'
+  /erc20-transactions:
+    get:
+      summary: Get all ERC-20 token transactions
+      description: |
+        Get all ERC-20 token transactions for the logged in user in chronological order and in a paginated fashion.
+      parameters:
+      - name: offset
+        in: query
+        description: |
+          Offset from which we want to obtain transactions (we skip offset - 1 of them, being sorted by date
+          descenging). Defaults to 0.
+        required: false
+        type: number
+      - name: limit
+        in: query
+        description: |
+          Number of transactions (in chronological descending order) we want to retrieve after skipping the offset.
+          Defaults to 10
+        required: false
+        type: number
+      tags:
+      - Transactions
+      responses:
+        200:
+          description: An array containing the transactions
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Transaction'
+        400:
+          description: An String containing the offending causes of this request
+          schema:
+            type: string
+            example: |
+              The limit query param must be a positive integer
+    post:
+      summary: Create a new outgoing transaction
+      description: |
+        Create a new ERC-20 token outgoing transaction. Mind that the body JSON attributes are case sensitive; that is a feature, not a bug.
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/TransactionPost'
+      tags:
+      - Transactions
+      responses:
+        201:
+          description: The transaction has been sent because the target address for the user exists
+        202:
+          description: "The transaction has been accepted and kept as pending because the target user doesn't have a solidGo account"
+        400:
+          description: The request body is wrong
+  /erc721-transactions:
+    get:
+      summary: Get all ERC-721 token transactions
+      description: |
+        Get all ERC-721 token transactions for the logged in user in chronological order and in a paginated fashion.
+      parameters:
+      - name: offset
+        in: query
+        description: |
+          Offset from which we want to obtain transactions (we skip offset - 1 of them, being sorted by date
+          descenging). Defaults to 0.
+        required: false
+        type: number
+      - name: limit
+        in: query
+        description: |
+          Number of transactions (in chronological descending order) we want to retrieve after skipping the offset.
+          Defaults to 10
+        required: false
+        type: number
+      tags:
+      - Transactions
+      responses:
+        200:
+          description: An array containing the transactions
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/TransactionToken721'
+        400:
+          description: An String containing the offending causes of this request
+          schema:
+            type: string
+            example: |
+              The limit query param must be a positive integer
+    post:
+      summary: Create a new outgoing transaction
+      description: |
+        Create a new ERC-721 token outgoing transaction. Mind that the body JSON attributes are case sensitive; that is a feature, not a bug.
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/721TransactionPost'
+      tags:
+      - Transactions
+      responses:
+        201:
+          description: The transaction has been sent because the target address for the user exists
+        202:
+          description: "The transaction has been accepted and kept as pending because the target user doesn't have a solidGo account"
+        400:
+          description: The request body is wrong
+  /erc20-transactions/{id}:
+    get:
+      summary: Information about a specific ERC-20 transaction
+      description: |
+        Information about a specific transaction
+      parameters:
+      - name: id
+        in: path
+        description: Transaction id
+        required: true
+        type: integer
+        format: int64
+      tags:
+      - Transactions
+      responses:
+        200:
+          description: Information about the specific ERC-20 transaction
+          schema:
+            $ref: '#/definitions/Transaction'
+  /erc721-transactions/{id}:
+    get:
+      summary: Information about a specific ERC-721 transaction
+      description: |
+        Information about a specific transaction
+      parameters:
+      - name: id
+        in: path
+        description: Transaction id
+        required: true
+        type: integer
+        format: int64
+      tags:
+      - Transactions
+      responses:
+        200:
+          description: Information about the specific ERC-721 transaction
+          schema:
+            $ref: '#/definitions/TransactionToken721'
+  /erc20-transactions/pending/{id}:
+    get:
+      summary: Information about a specific ERC-20 pending transaction
+      description: |
+        Information about a specific pending transaction
+      parameters:
+      - name: id
+        in: path
+        description: Transaction id
+        required: true
+        type: integer
+        format: int64
+      tags:
+      - Transactions
+      responses:
+        200:
+          description: |
+            Information about the transaction. "Pending" will always be true.
+          schema:
+            $ref: '#/definitions/Transaction'
+        404:
+          description: There are no transactions with the ID supplied
+  /erc721-transactions/pending/{id}:
+    get:
+      summary: Information about a specific ERC-721 pending transaction
+      description: |
+        Information about a specific pending transaction
+      parameters:
+      - name: id
+        in: path
+        description: Transaction id
+        required: true
+        type: integer
+        format: int64
+      tags:
+      - Transactions
+      responses:
+        200:
+          description: |
+            Information about the transaction. "Pending" will always be true.
+          schema:
+            $ref: '#/definitions/TransactionToken721'
+        404:
+          description: There are no transactions with the ID supplied
+  /erc20-withdrawals:
+    post:
+      summary: Withdraw ERC-20 tokens to an ethereum address
+      description: |
+        Withdraw tokens to an ethereum address.
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/Withdrawal'
+      tags:
+      - Withdrawals
+      responses:
+        201:
+          description: The withdrawal has been sent to Ethereum network for processing
+  /erc721-withdrawals:
+    post:
+      summary: Withdraw ERC-721 tokens to an ethereum address
+      description: |
+        Withdraw tokens to an ethereum address.
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/Withdrawal721'
+      tags:
+      - Withdrawals
+      responses:
+        201:
+          description: The withdrawal has been sent to Ethereum network for processing
+  /addresses:
+    get:
+      summary: Get associated ethereum addresses
+      description: |
+        Get ethereum addresses that can be used to send tokens from outside.
+      tags:
+      - Deposits
+      responses:
+        200:
+          description: |
+            The associated ethereum address (only 1 at the present time).
+            Addresses begin with 0x and are followed by 40 hexadecimal,
+            lowercase characters.
+          schema:
+            $ref: '#/definitions/Ethereum account address'
+
+        404:
+          description: |
+            A 404 Not Found error is returned if a user does not have an
+            associated Ethereum address. This is not expected to ever happen.
+  /users/me:
+    get:
+      summary: Get basic info and balances from the current user
+      description: |
+        Get basic info and balances from the current user. This is not a strict
+        REST endpoint, but an aggregation designed to work well with mobile
+        interfaces.
+      tags:
+      - User information
+      responses:
+        200:
+          description: |
+            User info and balances. The decimal part of each balance can be empty.
+          schema:
+            $ref: '#/definitions/User info'
+  /users/{query}?page={numPage}:
+    get:
+      summary: Get email for users that match the query
+      description: |
+        It finds the user that contains the specific query
+      parameters:
+      - name: query
+        in: path
+        description: Word to find inside user email
+        required: true
+        type: string
+      - name: page
+        in: path
+        description: Page number
+        required: true
+        type: int
+      tags:
+      - User information
+      responses:
+        200:
+          description: |
+            An array of objects, each of those contains the email
+            for a single user that matches the query.
+          schema:
+            type: array
+            items:
+              $ref: '#definitions/Users info'
+  /twitter/users/{query}:
+    get:
+      summary: Get full name, twitter screen name and avatar url for users that match the query
+      description: |
+        It uses Twitter API (search endpoint specifically) to do it.
+      parameters:
+      - name: query
+        in: path
+        description: Query string to look matches for, both in handles and names
+        required: true
+        type: string
+      tags:
+      - User information
+      responses:
+        200:
+          description: |
+            An array of objects, each of those contains the fullName, screenName and avatarUrl
+            for a single user that matches the query.
+          schema:
+            type: array
+            items:
+              $ref: '#definitions/Twitter info'
+  /v1/mobileauth:
+    get:
+      summary: Authenticates the user within the API
+      description: |
+        Triggers dance with Auth0, giving back a JWT that can be used to access the API from now on.
+      tags:
+      - Authentication
+      parameters:
+      - name: schema
+        in: query
+        description: The callback URL (or web intent) to which redirect after the authentication, and to which a token fragment will be appended carrying the JWT valid to use for further API calls. Defaults to ptblockchain://ptblockchain.wallet.com.
+        required: false
+        type: string
+      responses:
+        303:
+          description: A redirect (see other) pointing to the schema query string parameter given in the request, with the jwt fragment appended specifying the JWT valid to use the API on subsequent calls.
+definitions:
+  Ethereum account address:
+    properties:
+      address:
+        type: string
+    example:
+      address: '0xb612859054d1f382e02d26701eac45f09af2d241'
+  Tokens:
+    erc20-tokens:
+      type: array
+      items:
+        properties:
+        symbol:
+          type: string
+        name:
+          type: string
+    erc721-tokens:
+      type: array
+      items:
+        properties:
+          symbol:
+            type: string
+          name:
+            type: string
+    example:
+      erc20-tokens:
+      -  symbol: BKT
+         name: BankiaToken
+      erc721-tokens:
+      -  symbol: CA
+         name: Cards
+  User info:
+    properties:
+      userdata:
+        type: object
+        properties:
+          twNickname:
+            type: string
+          twFullname:
+            type: string
+          twAvatar:
+            type: string
+          ethAddr:
+            type: string
+      erc20-tokens:
+        type: array
+        items:
+          properties:
+            symbol:
+              type: string
+            fullname:
+              type: string
+            decimals:
+              type: number
+            amount:
+              type: object
+              properties:
+                whole:
+                  type: string
+                decimal:
+                  type: string
+      erc721-tokens:
+        type: array
+        items:
+          properties:
+            symbol:
+              type: string
+            fullname:
+              type: string
+            decimals:
+              type: number
+            amount:
+              type: object
+              properties:
+                whole:
+                  type: string
+                decimal:
+                  type: string
+    example:
+      userdata:
+        twNickname: gotoalberto
+        twFullname: Alberto Gómez Toribio
+        twAvatar: http://someavatarurl.com/image.jpg
+        ethAddr: '0x1234567890123456789012345678901234567890'
+      erc20-tokens:
+      - symbol: BKT
+        fullname: BankiaToken
+        decimals: 3
+        amount:
+          whole: '19'
+          decimal: '952'
+      - symbol: GNT
+        fullname: Golem
+        decimals: 18
+        amount:
+          whole: '2124'
+          decimal: '758186'
+      erc721-tokens:
+      - symbol: CA
+        fullname: cards
+        metadata: 'metadata..'
+        id: '69899529101725368827741449804778663019805595105900996565358607988661097985364'
+      - symbol: FIG
+        fullname: Figures
+        metadata: 'metadata..'
+        id: '80297596555585723096825972332431769619755960330124549670587808203206637942234'
+  Twitter info:
+    type: object
+    properties:
+      fullName:
+        type: string
+      screenName:
+        type: string
+      imageUrl:
+        type: string
+    example:
+      fullName: 'Plaid Mariano Rajoy'
+      screenName: 'Plaid_Rajoy'
+      imageUrl: 'http://pbs.twimg.com/profile_images/1766387278/Screen_shot_2012-01-19_at_9.39.07_AM_normal.png'
+  Withdrawal:
+    type: object
+    properties:
+      destination:
+        type: string
+      tokenSymbol:
+        type: string
+      amount:
+        type: string
+    example:
+      destination: '8b10301e990840cc78eab1ed2d0fcbede8ff219c'
+      tokenSymbol: ETH
+      amount: '100'
+  Withdrawal721:
+    type: object
+    properties:
+      destination:
+        type: string
+      id:
+        type: string
+    example:
+      destination: '8b10301e990840cc78eab1ed2d0fcbede8ff219c'
+      id: '71120786848863412851373030999642871879808768922518165984257232620739138279176'
+  Transaction:
+    properties:
+      id:
+        type: string
+      direction:
+        type: string
+      pending:
+        type: boolean
+      counterparty:
+        type: object
+        properties:
+          screenName:
+            type: string
+          fullName:
+            type: string
+          ethaddr:
+            type: string
+          avatarUrl:
+            type: string
+      token:
+        type: string
+      decimals:
+        type: number
+      amount:
+        type: object
+        properties:
+          whole:
+            type: string
+          decimal:
+            type: string
+      date:
+        type: string
+    example:
+      id: '105'
+      direction: send
+      pending: false
+      counterparty:
+        screenName: '@gotoalberto'
+        fullName: Alberto Gómez
+        ethaddr: '0x1234567890123456789012345678901234567890'
+        avatarUrl: http://someavatarurl.com/image.jpg
+      token: GNT
+      decimals: 18
+      amount:
+        whole: '2124'
+        decimal: '758186'
+      date: '2017-11-14T14:53:23Z'
+  TransactionToken721:
+    properties:
+      id:
+        type: string
+      direction:
+        type: string
+      pending:
+        type: boolean
+      counterparty:
+        type: object
+        properties:
+          screenName:
+            type: string
+          fullName:
+            type: string
+          ethaddr:
+            type: string
+          avatarUrl:
+            type: string
+      token:
+        type: string
+      metadata:
+        type: string
+      token_id:
+        type: string
+      date:
+        type: string
+    example:
+      id: '105'
+      direction: send
+      pending: false
+      counterparty:
+        screenName: '@gotoalberto'
+        fullName: Alberto Gómez
+        ethaddr: '0x1234567890123456789012345678901234567890'
+        avatarUrl: http://someavatarurl.com/image.jpg
+      token: NFT
+      metadata: "metadata"
+      token_id: "71120786848863412851373030999642871879808768922518165984257232620739138279176"
+      date: '2017-11-14T14:53:23Z'
+  TransactionPost:
+    type: object
+    properties:
+      destination:
+        type: string
+      tokenSymbol:
+        type: string
+      amount:
+        type: string
+      metaInf:
+        type: object
+    example:
+      destination: marianongdev
+      tokenSymbol: ETH
+      amount: '100'
+      metaInf:
+        comments: 'This is a textfield; just an example'
+        explanations: 'Names of the keys for this object can be arbitrary'
+        thisIsFreetext: 'Both keys and values can be whatever. They will be stored as they are associated to the transaction'
+  721TransactionPost:
+    type: object
+    properties:
+      destination:
+        type: string
+      id:
+        type: string
+      metaInf:
+        type: object
+    example:
+      destination: marianongdev
+      id: '71120786848863412851373030999642871879808768922518165984257232620739138279176'
+      metaInf:
+        comments: 'This is a textfield; just an example'
+        explanations: 'Names of the keys for this object can be arbitrary'
+        thisIsFreetext: 'Both keys and values can be whatever. They will be stored as they are associated to the transaction'
+  TokenPost:
+    type: object
+    properties:
+      name:
+        type: string
+      symbol:
+        type: string
+      initialAmount:
+        type: string
+      decimals:
+        type: number
+    example:
+      name: BankiaToken
+      symbol: BKT
+      initialAmount: '100000000000'
+      decimals: 3
+  TokenPost721:
+    type: object
+    properties:
+      name:
+        type: string
+      symbol:
+        type: string
+    example:
+      name: Cards
+      symbol: CA
+  TokenMint:
+    type: object
+    properties:
+      symbol:
+        type: string
+      amount:
+        type: string
+    example:
+      symbol: BKT
+      amount: '1000'
+  TokenMint721:
+    type: object
+    properties:
+      symbol:
+        type: string
+      metadata:
+        type: string
+    example:
+      symbol: CA
+      metadata: 'metadata..'
+  TokenBurn:
+    type: object
+    properties:
+      symbol:
+        type: string
+      amount:
+        type: string
+    example:
+      symbol: BKT
+      amount: '500'
+  TokenBurn721:
+    type: object
+    properties:
+      id:
+        type: string
+    example:
+      id: '71120786848863412851373030999642871879808768922518165984257232620739138279176'
+  ApiKey:
+    type: object
+    properties:
+      api_key:
+        type: string
+    example:
+      api_key: "a7ba9d76-42e8-4c5b-ac89-2b0a65884d7b"
+  Users info:
+    properties:
+      users:
+        type: array
+        items:
+          properties:
+            email:
+              type: string
+    example:
+      users:
+      - email: example@domain.com
+      - email: example@domain.com

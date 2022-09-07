@@ -1,0 +1,23 @@
+[0m[[0minfo[0m] [0mPackaging /Users/albertogomeztoribio/git/stockmind/web/primary-ports/target/scala-2.12/primary-ports_2.12-2.0.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/primary/TokensPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/primary-ports/src/main/scala/com/clluc/stockmind/port/primary/TokensPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/primary/EthereumAccountOperationsPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/primary-ports/src/main/scala/com/clluc/stockmind/port/primary/EthereumAccountOperationsPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/primary/SendTransactionPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/primary-ports/src/main/scala/com/clluc/stockmind/port/primary/SendTransactionPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/primary/RetrieveTransactionsPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/primary-ports/src/main/scala/com/clluc/stockmind/port/primary/RetrieveTransactionsPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/primary/SocialAuthPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/primary-ports/src/main/scala/com/clluc/stockmind/port/primary/SocialAuthPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/primary/UserPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/primary-ports/src/main/scala/com/clluc/stockmind/port/primary/UserPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/primary/TwitterPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/primary-ports/src/main/scala/com/clluc/stockmind/port/primary/TwitterPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/primary/BootstrapPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/primary-ports/src/main/scala/com/clluc/stockmind/port/primary/BootstrapPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/primary/Oauth1InfoPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/primary-ports/src/main/scala/com/clluc/stockmind/port/primary/Oauth1InfoPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/primary/PendingTransfersPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/primary-ports/src/main/scala/com/clluc/stockmind/port/primary/PendingTransfersPort.scala[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

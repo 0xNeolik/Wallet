@@ -1,0 +1,22 @@
+[Unit]
+Description=An API that allows people to send personal assets
+Requires=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/share/stockmind-api
+EnvironmentFile=/etc/default/stockmind-api
+ExecStart=/usr/share/stockmind-api/bin/stockmind-api
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=60
+SuccessExitStatus=
+User=stockmind-api
+ExecStartPre=/bin/mkdir -p /run/stockmind-api
+ExecStartPre=/bin/chown stockmind-api:stockmind-api /run/stockmind-api
+ExecStartPre=/bin/chmod 755 /run/stockmind-api
+PermissionsStartOnly=true
+LimitNOFILE=1024
+
+[Install]
+WantedBy=multi-user.target

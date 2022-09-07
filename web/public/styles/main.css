@@ -1,0 +1,53 @@
+body {
+    padding-top: 50px;
+    font-size: 16px;
+    background: #f5f7f9;
+}
+
+fieldset {
+    margin-top: 100px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.provider {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.twitter { background: #00ACED; }
+
+.social-providers,
+.sign-in-now,
+.already-member,
+.not-a-member {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user {
+    margin-top: 50px;
+}
+.user .data {
+    margin-top: 10px;
+}
+
+.command-bar {
+    margin-top: 50px;
+}
+
+#sendAsset {
+    z-index: 0;
+}
+
+
+/* Typeahead autocompletion */
+
+.tt-menu.tt-open {
+    background: rgba(191,205,217, 0.8);
+}

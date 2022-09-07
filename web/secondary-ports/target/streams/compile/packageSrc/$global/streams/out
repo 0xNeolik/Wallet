@@ -1,0 +1,35 @@
+[0m[[0minfo[0m] [0mPackaging /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/target/scala-2.12/secondary-ports_2.12-2.0.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/UserPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/UserPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/EthereumAccountPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/EthereumAccountPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/TwitterAccountPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/TwitterAccountPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/AuthTokenPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/AuthTokenPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/Erc20TransferEventPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/Erc20TransferEventPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/AppConfigPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/AppConfigPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/InboundTransferPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/InboundTransferPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/Oauth1InfoPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/Oauth1InfoPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/PendingTransferPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/PendingTransferPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/OffChainTransferPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/OffChainTransferPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/TwitterPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/TwitterPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/Erc20InfoPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/Erc20InfoPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/OffchainBalancePort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/OffchainBalancePort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/EthereumClientPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/EthereumClientPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/OutboundTransferPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/OutboundTransferPort.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/port/secondary/SettleTransferPort.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/secondary-ports/src/main/scala/com/clluc/stockmind/port/secondary/SettleTransferPort.scala[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

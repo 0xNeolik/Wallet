@@ -1,0 +1,9 @@
+twitterSecondaryAdapter
+ethereumSecondaryAdapter
+postgresSecondaryAdapter
+controllers
+entryPoint
+secondaryPorts
+primaryPorts
+model
+core

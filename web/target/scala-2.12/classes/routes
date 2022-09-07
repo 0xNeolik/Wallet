@@ -1,0 +1,43 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET         /v1/mobileauth/:provider            com.clluc.stockmind.controller.SocialAuthController.mobileAuth(provider)
+GET         /mobileauth/:provider               com.clluc.stockmind.controller.SocialAuthController.mobileAuth(provider)
+
+############################
+#
+# REST API v1
+#
+############################
+
+GET         /v1/users/me                    com.clluc.stockmind.controller.UsersController.findUserInfo
+
+POST        /v1/withdrawals                 com.clluc.stockmind.controller.SendTransactionController.withdraw
+
+GET         /v1/transactions                com.clluc.stockmind.controller.RetrieveTransactionsController.getTransactionsPage
+
+GET         /v1/transactions/:id            com.clluc.stockmind.controller.RetrieveTransactionsController.getTransaction(id)
+
+GET         /v1/transactions/pending/:id    com.clluc.stockmind.controller.RetrieveTransactionsController.getPendingTransaction(id)
+
+POST        /v1/transactions                com.clluc.stockmind.controller.SendTransactionController.transfer
+
+DELETE      /v1/transactions/pending/:id    com.clluc.stockmind.controller.RetrieveTransactionsController.cancelPendingTransaction(id)
+
+GET         /v1/stream/:id                  com.clluc.stockmind.controller.StreamController.stream(id)
+GET         /v1/stream/echo/:id             com.clluc.stockmind.controller.StreamController.streamEcho(id)
+
+GET         /v1/tokens                      com.clluc.stockmind.controller.TokensController.supportedTokens
+POST        /v1/tokens                      com.clluc.stockmind.controller.TokensController.createNewToken
+
+# TODO To be more REST-like, maybe we should rename the "queryuser" part of the URL to "user"
+# (the actual REST resource)
+GET         /v1/twitter/users/:query        com.clluc.stockmind.controller.TwitterController.queryUser(query)
+
+######################
+#
+# Fake assets to enable certificate installation
+#
+######################
+GET  /assets/*file        controllers.Assets.at(file)

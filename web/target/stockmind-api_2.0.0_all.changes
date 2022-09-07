@@ -1,0 +1,20 @@
+Format: 1.8
+Date: Thu, 9 Aug 2018 13:10:47 +0200
+Source: stockmind-api
+Binary: stockmind-api
+Architecture: all
+Version: 2.0.0
+Distribution: unknown
+Urgency: low
+Maintainer: Víctor Villena <victor.villena@clluc.com>
+Changed-By: Víctor Villena <victor.villena@clluc.com>
+Description:
+ stockmind-api - An API that allows people to send personal assets
+Changes:
+ stockmind-api (2.0.0) unknown; urgency=low
+Checksums-Sha1:
+ 0891881bb3c7cde99b58526ceb088823cb1a726e 76369500 stockmind-api_2.0.0_all.deb
+Checksums-Sha256:
+ d57eee4591cefb3efd037cd3d816dde4948be965cac032f78afda0cfba092fd7 76369500 stockmind-api_2.0.0_all.deb
+Files:
+ c2597e7deac0843bc3bcefd4e8a80b7f 76369500 java optional stockmind-api_2.0.0_all.deb

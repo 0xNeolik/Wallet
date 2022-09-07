@@ -1,0 +1,77 @@
+// TODO Test cases that should be migrated to other Spec classes
+  // As we are testing one method of the controller per Spec class to ease the fixture generation
+  describe("When getting a transaction by id") {
+    describe("Some request parameter are wrong") {
+      it("If the tx id is not a number we get a Bad Request") {
+        pending
+      }
+    }
+
+    describe("Request parameters are right and call can be made") {
+      it("If we don't find a tx with that id we return a Not Found response") {
+        pending
+      }
+
+      describe("If we find a tx") {
+        it("We get an Ok") {
+          pending
+        }
+
+        it("The body contains a JSON describing the tx as expected") {
+          pending
+        }
+      }
+    }
+  }
+
+  describe("When getting a pending transaction by id") {
+    describe("Some request parameter are wrong") {
+      it("If the tx id is not a number we get a Bad Request") {
+        pending
+      }
+    }
+
+    describe("Request parameters are right and call can be made") {
+      it("If we don't find a tx with that id we return a Not Found response") {
+        pending
+      }
+
+      describe("If we find a tx") {
+        it("We get an Ok") {
+          pending
+        }
+
+        it("The body contains a JSON describing the tx as expected") {
+          pending
+        }
+      }
+    }
+  }
+
+  describe("When cancelling a tx by id") {
+    describe("Some request parameter are wrong") {
+      it("If the tx id is not a number we get a Bad Request") {
+        pending
+      }
+    }
+
+    describe("Request parameters are right and call can be made") {
+      it("If we don't find a tx with that id we return a Not Found response") {
+        pending
+      }
+
+      it("If the transaction exists but doesn't belong to the user trying to cancel it we return FORBIDDEN") {
+        pending
+      }
+
+      describe("If the user can cancel the tx") {
+        it("We return Ok") {
+          pending
+        }
+
+        it("The body is empty") {
+          pending
+        }
+      }
+    }
+  }

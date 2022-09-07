@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="com.clluc"
+		module="stockmind-api_2.12"
+		revision="2.0.0"
+		status="integration"
+		publication="20180809130705"
+	>
+		<description>
+		stockmind-api
+		</description>
+	</info>
+	<configurations>
+		<conf name="universal" visibility="public" description=""/>
+		<conf name="universal-docs" visibility="public" description=""/>
+		<conf name="universal-src" visibility="public" description=""/>
+		<conf name="linux" visibility="public" description=""/>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		<conf name="windows" visibility="public" description=""/>
+		<conf name="docker" visibility="public" description=""/>
+		<conf name="debian" visibility="public" description="" extends="linux"/>
+		<conf name="rpm" visibility="public" description="" extends="linux"/>
+		<conf name="it" visibility="public" description="" extends="runtime"/>
+		<conf name="compile-internal" visibility="private" description="" extends="compile,optional,provided"/>
+		<conf name="runtime-internal" visibility="private" description="" extends="runtime,optional"/>
+		<conf name="test-internal" visibility="private" description="" extends="test,optional,provided"/>
+		<conf name="it-internal" visibility="private" description="" extends="it,optional,provided"/>
+		<conf name="plugin" visibility="private" description=""/>
+		<conf name="sources" visibility="public" description=""/>
+		<conf name="docs" visibility="private" description=""/>
+		<conf name="pom" visibility="public" description=""/>
+		<conf name="scala-tool" visibility="private" description=""/>
+		<conf name="scalafmt" visibility="private" description=""/>
+		<conf name="scoveragePlugin" visibility="private" description=""/>
+	</configurations>
+	<publications>
+		<artifact name="stockmind-api_2.12" type="pom" ext="pom" conf="pom"/>
+		<artifact name="stockmind-api_2.12" type="jar" ext="jar" conf="compile"/>
+		<artifact name="stockmind-api_2.12" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		<artifact name="stockmind-api_2.12" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.3" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.12.3" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="com.clluc" name="primary-ports_2.12" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="com.clluc" name="secondary-ports_2.12" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="com.clluc" name="core_2.12" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="com.clluc" name="postgres-secondary-adapter_2.12" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="com.clluc" name="ethereum-secondary-adapter_2.12" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="com.clluc" name="twitter-secondary-adapter_2.12" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="com.clluc" name="controllers_2.12" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="twirl-api_2.12" rev="1.3.12" conf="compile->default(compile)"/>
+		<dependency org="com.geirsson" name="scalafmt-core_2.12" rev="1.3.0" conf="scalafmt->default(compile)"/>
+		<dependency org="com.lucidchart" name="scalafmt-impl_2.12" rev="1.14-1.0" conf="scalafmt->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-server_2.12" rev="2.6.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-test_2.12" rev="2.6.6" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-omnidoc_2.12" rev="2.6.6" conf="docs->default(compile)"/>
+		<dependency org="com.typesafe.play" name="filters-helpers_2.12" rev="2.6.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-logback_2.12" rev="2.6.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-akka-http-server_2.12" rev="2.6.6" conf="compile->default(compile)"/>
+		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.0.1" conf="test->default(compile)">
+			<artifact name="scalatest_2.12" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+			<artifact name="scalatest_2.12" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="scalatest_2.12" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<dependency org="org.scalacheck" name="scalacheck_2.12" rev="1.13.4" conf="test->default(compile)">
+			<artifact name="scalacheck_2.12" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+			<artifact name="scalacheck_2.12" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="scalacheck_2.12" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<dependency org="com.typesafe.scala-logging" name="scala-logging_2.12" rev="3.5.0" conf="compile->default(compile)">
+			<artifact name="scala-logging_2.12" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="scala-logging_2.12" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<dependency org="ch.qos.logback" name="logback-classic" rev="1.1.7" conf="compile->default(compile)">
+			<artifact name="logback-classic" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="logback-classic" type="jar" ext="jar" conf="*"/>
+		</dependency>
+		<dependency org="com.typesafe.play" name="play-guice_2.12" rev="2.6.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-mailer_2.12" rev="6.0.1" conf="compile->default(compile)"/>
+		<dependency org="com.mohiva" name="play-silhouette_2.12" rev="5.0.2" conf="compile->default(compile)"/>
+		<dependency org="com.mohiva" name="play-silhouette-password-bcrypt_2.12" rev="5.0.2" conf="compile->default(compile)"/>
+		<dependency org="com.mohiva" name="play-silhouette-persistence_2.12" rev="5.0.2" conf="compile->default(compile)"/>
+		<dependency org="com.mohiva" name="play-silhouette-crypto-jca_2.12" rev="5.0.2" conf="compile->default(compile)"/>
+		<dependency org="net.codingwell" name="scala-guice_2.12" rev="4.1.0" conf="compile->default(compile)"/>
+		<dependency org="com.iheart" name="ficus_2.12" rev="1.4.1" conf="compile->default(compile)"/>
+		<dependency org="com.mohiva" name="play-silhouette-testkit_2.12" rev="5.0.2" conf="test->default(compile)"/>
+		<dependency org="org.scalamock" name="scalamock-scalatest-support_2.12" rev="3.6.0" conf="test->default(compile)"/>
+		<dependency org="io.circe" name="circe-core_2.12" rev="0.8.0" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-generic_2.12" rev="0.8.0" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-shapes_2.12" rev="0.8.0" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-parser_2.12" rev="0.8.0" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-optics_2.12" rev="0.8.0" conf="compile->default(compile)"/>
+	</dependencies>
+</ivy-module>

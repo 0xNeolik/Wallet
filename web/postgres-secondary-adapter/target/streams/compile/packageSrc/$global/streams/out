@@ -1,0 +1,33 @@
+[0m[[0minfo[0m] [0mPackaging /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/target/scala-2.12/postgres-secondary-adapter_2.12-2.0.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresErc20InfoAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresErc20InfoAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/Dao.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/Dao.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresAppConfigAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresAppConfigAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresOffchainBalanceAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresOffchainBalanceAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresOffChainTransferAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresOffChainTransferAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresPendingTransferAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresPendingTransferAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresAuthTokenAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresAuthTokenAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresOutboundTransferAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresOutboundTransferAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresInboundTransferAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresInboundTransferAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresTwitterAccountAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresTwitterAccountAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresErc20TransferEventAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresErc20TransferEventAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresOauth1InfoAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresOauth1InfoAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresUserAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresUserAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresSettleTransferAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresSettleTransferAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	com/clluc/stockmind/adapter/postgres/PostgresEthereumAccountAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/postgres-secondary-adapter/src/main/scala/com/clluc/stockmind/adapter/postgres/PostgresEthereumAccountAdapter.scala[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

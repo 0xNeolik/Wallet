@@ -1,0 +1,54 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET         /v1/mobileauth                       com.clluc.stockmind.controller.SocialAuthController.mobileAuth()
+GET         /mobileauth                          com.clluc.stockmind.controller.SocialAuthController.mobileAuth()
+GET     	/v1/mobileauth/callback              com.clluc.stockmind.controller.CallbackAuth.callback(code: Option[String], state: Option[String])
+GET         /v1/logout                           com.clluc.stockmind.controller.SocialAuthController.logout()
+############################
+#
+# REST API v1
+#
+############################
+
+GET         /v1/users/me                         com.clluc.stockmind.controller.UsersController.findUserInfo
+
+GET         /v1/users/apikey                     com.clluc.stockmind.controller.UsersController.addApiKey
+DELETE      /v1/users/apikey/:apiKey             com.clluc.stockmind.controller.UsersController.removeApiKey(apiKey)
+
+POST        /v1/erc20-withdrawals                com.clluc.stockmind.controller.SendTransactionController.withdraw
+POST        /v1/erc721-withdrawals               com.clluc.stockmind.controller.SendTransactionController.withdraw721
+
+GET         /v1/erc20-transactions               com.clluc.stockmind.controller.RetrieveTransactionsController.getTransactionsPage
+GET         /v1/erc721-transactions              com.clluc.stockmind.controller.RetrieveTransactionsController.get721TransactionsPage
+
+GET         /v1/erc20-transactions/:id           com.clluc.stockmind.controller.RetrieveTransactionsController.getTransaction(id)
+GET         /v1/erc721-transactions/:id          com.clluc.stockmind.controller.RetrieveTransactionsController.get721Transaction(id)
+
+GET         /v1/erc20-transactions/pending/:id   com.clluc.stockmind.controller.RetrieveTransactionsController.getPendingTransaction(id)
+GET         /v1/erc721-transactions/pending/:id  com.clluc.stockmind.controller.RetrieveTransactionsController.getPending721Transaction(id)
+
+POST        /v1/erc20-transactions               com.clluc.stockmind.controller.SendTransactionController.transfer
+POST        /v1/erc721-transactions              com.clluc.stockmind.controller.SendTransactionController.transfer721
+
+DELETE      /v1/transactions/pending/:id         com.clluc.stockmind.controller.RetrieveTransactionsController.cancelPendingTransaction(id)
+
+GET         /v1/stream/:id                       com.clluc.stockmind.controller.StreamController.stream(id)
+GET         /v1/stream/echo/:id                  com.clluc.stockmind.controller.StreamController.streamEcho(id)
+
+GET         /v1/tokens                           com.clluc.stockmind.controller.TokensController.supportedTokens
+
+POST        /v1/erc20-tokens                     com.clluc.stockmind.controller.TokensController.createErc20Token
+POST        /v1/erc721-tokens                    com.clluc.stockmind.controller.TokensController.createErc721Token
+
+POST        /v1/erc20-tokens/mint                com.clluc.stockmind.controller.TokensController.mintERC20Token
+POST        /v1/erc721-tokens/mint               com.clluc.stockmind.controller.TokensController.mintERC721Token
+
+POST        /v1/erc20-tokens/burn                com.clluc.stockmind.controller.TokensController.burnERC20Token
+POST        /v1/erc721-tokens/burn               com.clluc.stockmind.controller.TokensController.burnERC721Token
+
+# TODO To be more REST-like, maybe we should rename the "queryuser" part of the URL to "user"
+# (the actual REST resource)
+GET         /v1/twitter/users/:query        com.clluc.stockmind.controller.TwitterController.queryUser(query)
+GET         /v1/users/:query                com.clluc.stockmind.controller.UsersController.queryUser(query, page: Int ?= 0)

@@ -1,0 +1,27 @@
+[0m[[0minfo[0m] [0mPackaging /Users/albertogomeztoribio/git/stockmind/web/target/scala-2.12/stockmind-api_2.12-2.0.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	application.prod.conf[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/conf/application.prod.conf[0m
+[0m[[0mdebug[0m] [0m	modules/BaseModule.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/app/modules/BaseModule.scala[0m
+[0m[[0mdebug[0m] [0m	modules/PortsAdaptersModule.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/app/modules/PortsAdaptersModule.scala[0m
+[0m[[0mdebug[0m] [0m	modules/JobModule.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/app/modules/JobModule.scala[0m
+[0m[[0mdebug[0m] [0m	application.conf[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/conf/application.conf[0m
+[0m[[0mdebug[0m] [0m	modules/SilhouetteModule.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/app/modules/SilhouetteModule.scala[0m
+[0m[[0mdebug[0m] [0m	messages[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/conf/messages[0m
+[0m[[0mdebug[0m] [0m	silhouette.conf[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/conf/silhouette.conf[0m
+[0m[[0mdebug[0m] [0m	stockmind_KeyStore.jks[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/conf/stockmind_KeyStore.jks[0m
+[0m[[0mdebug[0m] [0m	logback.xml[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/conf/logback.xml[0m
+[0m[[0mdebug[0m] [0m	keystore.p12[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/conf/keystore.p12[0m
+[0m[[0mdebug[0m] [0m	routes[0m
+[0m[[0mdebug[0m] [0m	  /Users/albertogomeztoribio/git/stockmind/web/conf/routes[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
